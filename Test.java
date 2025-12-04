@@ -5,10 +5,12 @@ public class Test {
         Colloquio c1 = new Colloquio("Deyae", "Nawal", "4IE", 1);
         Colloquio c2 = new Colloquio("Giacomo", "Roberto", "4IE", 2);
         Colloquio c3 = new Colloquio("Ilario", "Pamela", "4IE", 3);
+        Colloquio c4 = new Colloquio("Federico", "Genni", "4IE", 4);
 
         registro1.aggiungiColloquio(c1);
         registro1.aggiungiColloquio(c2);
         registro1.aggiungiColloquio(c3);
+        registro1.aggiungiColloquio(c4);
 
         System.out.println("Cerca genitore 'Marco': " + registro1.cercaGenitore("Marco"));
         System.out.println("Cerca genitore 'Pamela': " + registro1.cercaGenitore("Pamela"));
