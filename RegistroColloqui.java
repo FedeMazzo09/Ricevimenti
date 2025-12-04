@@ -1,8 +1,10 @@
 public class RegistroColloqui {
     private Colloquio[] registro;
+    private String docente;
 
-    public RegistroColloqui() {
+    public RegistroColloqui(String docente) {
         registro = new Colloquio[4];
+        this.docente = docente;
     }
 
     boolean isOccupato(int turno) {
