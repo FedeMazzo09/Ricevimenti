@@ -16,6 +16,13 @@ public class RegistroColloqui {
         if (!isOccupato(turno)) {
             registro[turno - 1] = c;
             return true;
+        } else {
+            for (int i = 0; i < registro.length; i++) {
+                if (registro[i] == null) {
+                    registro[i] = c;
+                    return true;
+                }
+            }
         }
         return false;
     }
