@@ -11,21 +11,25 @@ public class RegistroColloqui {
         return registro[turno - 1] != null;
     }
 
-    boolean aggiungiColloquio(Colloquio c) {
+    void aggiungiColloquio(Colloquio c) {
         int turno = c.getTurno();
         if (!isOccupato(turno)) {
             registro[turno - 1] = c;
-            return true;
         } else {
+            boolean aggiunto = false;
             for (int i = 0; i < registro.length; i++) {
                 if (registro[i] == null) {
                     registro[i] = c;
-                    return true;
+                    aggiunto = true;
+                    throw new SlotOccupatoException("Slot occupato, colloquio aggiunto al primo slot libero: " + (i + 1));
                 }
             }
+            if (!aggiunto) {
+                throw new SlotEsauritiException("Slot esauriti, impossibile aggiungere il colloquio.");
+            }
         }
-        return false;
     }
+
 
     boolean fineColloquio(int turno) {
         if (isOccupato(turno)) {

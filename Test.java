@@ -20,6 +20,7 @@ public class Test {
         System.out.println("Cerca genitore 'Roberto' dopo fine colloquio: " + registro1.cercaGenitore("Roberto"));
 
         System.out.println("Cerca genitore 'Pamela' dopo fine colloquio: " + registro1.cercaGenitore("Genni"));
+
         registro1.fineColloquio(4);
         System.out.println("Cerca genitore 'Genni' dopo fine colloquio: " + registro1.cercaGenitore("Genni"));
     }
